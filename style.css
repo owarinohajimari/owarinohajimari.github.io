@@ -27,23 +27,22 @@ a {
 }
 
 .hero {
-  margin: 0 0 42px;
-  border-bottom: 1px solid #242424;
-  padding-bottom: 24px;
+  display: flex;
+  justify-content: center;
+  padding: 22px 0 34px;
+  margin-bottom: 30px;
+  border-bottom: 1px solid #222;
 }
 
 .brand-logo {
   display: block;
-  width: 100%;
+  width: min(680px, 86%);
   height: auto;
-  max-height: 230px;
-  object-fit: cover;
-  object-position: center;
-  filter: grayscale(1) contrast(1.03) brightness(.92);
+  opacity: .92;
 }
 
 .group {
-  margin-top: 28px;
+  margin-top: 27px;
 }
 
 .group-title {
@@ -51,11 +50,11 @@ a {
   font-size: 11px;
   font-weight: 400;
   letter-spacing: .08em;
-  color: #b0b0ad;
+  color: #aaa;
 }
 
 .links {
-  border-top: 1px solid #2a2a2a;
+  border-top: 1px solid #252525;
 }
 
 .link-row {
@@ -64,12 +63,8 @@ a {
   align-items: center;
   gap: 18px;
   min-height: 50px;
-  border-bottom: 1px solid #2a2a2a;
-  transition:
-    background .16s ease,
-    color .16s ease,
-    padding .16s ease,
-    border-color .16s ease;
+  border-bottom: 1px solid #252525;
+  transition: background .16s ease, color .16s ease, padding .16s ease;
 }
 
 .link-name {
@@ -82,7 +77,7 @@ a {
   font-size: 7px;
   letter-spacing: .14em;
   text-transform: uppercase;
-  color: #5d5d5b;
+  color: #595957;
   white-space: nowrap;
 }
 
@@ -91,7 +86,6 @@ a {
     background: #efefec;
     color: #090909;
     padding: 0 12px;
-    border-color: #efefec;
   }
 
   .link-row:hover .link-meta {
@@ -106,13 +100,12 @@ a {
   }
 
   .hero {
-    margin-bottom: 28px;
-    padding-bottom: 16px;
+    padding: 14px 0 24px;
+    margin-bottom: 24px;
   }
 
   .brand-logo {
-    max-height: none;
-    object-fit: contain;
+    width: 94%;
   }
 
   .group {
@@ -129,9 +122,5 @@ a {
 
   .link-name {
     font-size: 16px;
-  }
-
-  .link-meta {
-    font-size: 7px;
   }
 }
