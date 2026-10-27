@@ -1,4 +1,3 @@
-// URLが空欄の項目は自動的に非表示になります。
 window.OWAHAJI_LINKS = {
   official: [
     { name: "Official X", meta: "X", url: "https://x.com/OWA___HAJI___" },
