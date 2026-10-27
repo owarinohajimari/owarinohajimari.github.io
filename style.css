@@ -4,7 +4,17 @@
 html, body {
   margin: 0;
   min-height: 100%;
-  background: #080808;
+  background:
+    radial-gradient(circle at 20% 10%, rgba(255,255,255,.018), transparent 32%),
+    radial-gradient(circle at 80% 30%, rgba(255,255,255,.012), transparent 36%),
+    repeating-linear-gradient(
+      0deg,
+      rgba(255,255,255,.008) 0px,
+      rgba(255,255,255,.008) 1px,
+      transparent 1px,
+      transparent 3px
+    ),
+    #080808;
   color: #f1f1ee;
 }
 
@@ -33,7 +43,7 @@ a {
   justify-content: space-between;
   gap: 24px;
   padding-bottom: 22px;
-  border-bottom: 1px solid #2b2b2b;
+  border-bottom: 1px solid #292929;
 }
 
 .brand {
@@ -42,10 +52,10 @@ a {
 }
 
 .brand-logo {
-  width: 292px;
-  max-width: 46vw;
+  width: 260px;
+  max-width: 42vw;
   height: auto;
-  opacity: .92;
+  opacity: .90;
 }
 
 .mast-meta {
@@ -56,7 +66,7 @@ a {
 }
 
 .menu-block {
-  border-bottom: 1px solid #2b2b2b;
+  border-bottom: 1px solid #292929;
   padding: 18px 18px 0;
 }
 
@@ -80,7 +90,7 @@ a {
   align-items: center;
   gap: 20px;
   min-height: 52px;
-  border-top: 1px solid #1f1f1f;
+  border-top: 1px solid #232323;
   transition:
     color .14s ease,
     background .14s ease,
@@ -125,8 +135,8 @@ a {
   }
 
   .brand-logo {
-    width: 212px;
-    max-width: 72vw;
+    width: 190px;
+    max-width: 68vw;
   }
 
   .mast-meta {
