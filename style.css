@@ -22,7 +22,7 @@ a {
 .page {
   width: min(760px, calc(100% - 48px));
   margin: 0 auto;
-  padding: 64px 0 20px;
+  padding: 64px 0 28px;
 }
 
 .intro {
@@ -45,6 +45,10 @@ a {
 
 .group {
   margin-top: 32px;
+}
+
+.final-group {
+  margin-bottom: 0;
 }
 
 .group-title {
@@ -93,19 +97,10 @@ a {
   color: #3a3a3a;
 }
 
-.footer {
-  margin-top: 30px;
-  padding-top: 12px;
-  border-top: 1px solid #202020;
-  font-size: 8px;
-  letter-spacing: .07em;
-  color: #555;
-}
-
 @media (max-width: 560px) {
   .page {
     width: min(100% - 28px, 760px);
-    padding: 42px 0 18px;
+    padding: 42px 0 22px;
   }
 
   .intro {
@@ -126,9 +121,5 @@ a {
 
   .link-name {
     font-size: 17px;
-  }
-
-  .footer {
-    margin-top: 28px;
   }
 }
