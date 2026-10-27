@@ -1,6 +1,6 @@
 window.OWAHAJI_LINKS = {
   official: [
-    { name: "X", meta: "X", url: "https://x.com/OWA___HAJI___" },
+    { name: "X", meta: "owarinohajimari.", url: "https://x.com/OWA___HAJI___" },
     { name: "YouTube", meta: "Video", url: "https://www.youtube.com/@owahaji_official" },
     { name: "TikTok", meta: "Short", url: "https://www.tiktok.com/@owahaji_official" },
     { name: "Online shop 間 -AWAI-", meta: "Store", url: "https://owahaji-awai.booth.pm" }
