@@ -5,30 +5,27 @@
     const el = document.getElementById(id);
     if (!el) return;
 
-    items
-      .filter(item => item.url && item.url.trim())
-      .forEach(item => {
-        const a = document.createElement("a");
-        a.className = "link-row";
-        a.href = item.url;
-        a.target = "_blank";
-        a.rel = "noopener noreferrer";
+    items.filter(item => item.url && item.url.trim()).forEach(item => {
+      const a = document.createElement("a");
+      a.className = "link-row";
+      a.href = item.url;
+      a.target = "_blank";
+      a.rel = "noopener noreferrer";
 
-        const name = document.createElement("span");
-        name.className = "link-name";
-        name.textContent = item.name;
+      const name = document.createElement("span");
+      name.className = "link-name";
+      name.textContent = item.name;
 
-        const meta = document.createElement("span");
-        meta.className = "link-meta";
-        meta.textContent = `${item.meta} ↗`;
+      const meta = document.createElement("span");
+      meta.className = "link-meta";
+      meta.textContent = `${item.meta} ↗`;
 
-        a.append(name, meta);
-        el.appendChild(a);
-      });
+      a.append(name, meta);
+      el.appendChild(a);
+    });
   };
 
   render("official-links", groups.official);
   render("takase-links", groups.takase);
   render("nehan-links", groups.nehan);
-  render("awai-links", groups.awai);
 })();

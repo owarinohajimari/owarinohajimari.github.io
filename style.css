@@ -26,9 +26,7 @@ a {
   padding: 64px 0 28px;
 }
 
-.intro {
-  margin-bottom: 50px;
-}
+.intro { margin-bottom: 50px; }
 
 .title-ja {
   font-family: "Hiragino Mincho ProN", "Yu Mincho", serif;
@@ -44,13 +42,7 @@ a {
   color: #787878;
 }
 
-.group {
-  margin-top: 32px;
-}
-
-.final-group {
-  margin-bottom: 0;
-}
+.group { margin-top: 32px; }
 
 .group-title {
   margin-bottom: 8px;
@@ -60,9 +52,7 @@ a {
   color: #c5c5c5;
 }
 
-.links {
-  border-top: 1px solid #303030;
-}
+.links { border-top: 1px solid #303030; }
 
 .link-row {
   display: flex;
@@ -88,7 +78,6 @@ a {
   white-space: nowrap;
 }
 
-/* Hover effects only on devices that actually support hovering */
 @media (hover: hover) and (pointer: fine) {
   .link-row:hover {
     background: #efefeb;
@@ -96,9 +85,7 @@ a {
     padding: 0 10px;
   }
 
-  .link-row:hover .link-meta {
-    color: #3a3a3a;
-  }
+  .link-row:hover .link-meta { color: #3a3a3a; }
 }
 
 @media (max-width: 560px) {
@@ -107,23 +94,9 @@ a {
     padding: 42px 0 22px;
   }
 
-  .intro {
-    margin-bottom: 42px;
-  }
-
-  .group {
-    margin-top: 28px;
-  }
-
-  .group-title {
-    font-size: 11px;
-  }
-
-  .link-row {
-    min-height: 52px;
-  }
-
-  .link-name {
-    font-size: 17px;
-  }
+  .intro { margin-bottom: 42px; }
+  .group { margin-top: 28px; }
+  .group-title { font-size: 11px; }
+  .link-row { min-height: 52px; }
+  .link-name { font-size: 17px; }
 }
