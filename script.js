@@ -17,7 +17,7 @@
 
       const meta = document.createElement("span");
       meta.className = "link-meta";
-      meta.textContent = item.meta ? `${item.meta} ↗` : "↗";
+      meta.textContent = `${item.meta} ↗`;
 
       a.append(name, meta);
       el.appendChild(a);
