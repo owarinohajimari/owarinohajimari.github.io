@@ -1,6 +1,5 @@
 (() => {
   const groups = window.OWAHAJI_LINKS || {};
-
   const render = (id, items = []) => {
     const el = document.getElementById(id);
     if (!el) return;

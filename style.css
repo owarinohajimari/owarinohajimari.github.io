@@ -55,7 +55,7 @@ a {
 .mast-meta {
   font-size: 8px;
   letter-spacing: .22em;
-  color: #777773;
+  color: #7d7d78;
 }
 
 .content-column {
@@ -64,25 +64,29 @@ a {
 }
 
 .menu-block {
-  padding-top: 18px;
+  margin-top: 18px;
+  padding-top: 17px;
+  border-top: 1px solid #3b3b38;
 }
 
-.menu-block + .menu-block {
-  margin-top: 4px;
+.menu-block.first-block {
+  margin-top: 0;
+  padding-top: 0;
+  border-top: 0;
 }
 
 .menu-label {
   margin-bottom: 8px;
   padding-left: 9px;
-  border-left: 1px solid #7b7b77;
+  border-left: 1px solid #858580;
   font-size: 11px;
   letter-spacing: .07em;
-  color: #a7a7a2;
+  color: #adada8;
   line-height: 1.2;
 }
 
 .links {
-  border-top: 1px solid #30302f;
+  border-top: 1px solid #333330;
 }
 
 .link-row {
@@ -104,7 +108,7 @@ a {
 .link-meta {
   font-size: 8px;
   letter-spacing: .13em;
-  color: #777773;
+  color: #858580;
   white-space: nowrap;
 }
 
@@ -145,7 +149,13 @@ a {
   }
 
   .menu-block {
-    padding-top: 15px;
+    margin-top: 16px;
+    padding-top: 14px;
+  }
+
+  .menu-block.first-block {
+    margin-top: 0;
+    padding-top: 0;
   }
 
   .menu-label {
