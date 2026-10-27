@@ -97,9 +97,6 @@ a {
   margin-top: 30px;
   padding-top: 12px;
   border-top: 1px solid #202020;
-  display: flex;
-  justify-content: space-between;
-  gap: 18px;
   font-size: 8px;
   letter-spacing: .07em;
   color: #555;
@@ -133,7 +130,5 @@ a {
 
   .footer {
     margin-top: 28px;
-    flex-direction: column;
-    gap: 5px;
   }
 }
