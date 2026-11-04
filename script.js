@@ -3,26 +3,23 @@
   // Data is loaded from the original links.js, preserving every existing URL.
   const groups = window.OWAHAJI_LINKS || {};
 
-  // Preserve the link-directory order from the previous published version.
-  const producer = [
-    { key: 'takase', title: 'TAKASE KEI', subtitle: 'Producer / 高世 圭', art: 5 }
-  ];
-
+  // Member order is preserved. The floral illustrations alongside LIVER have
+  // been removed and replaced with restrained index numerals.
   const liver = [
-    { key: 'nehan', title: 'NEHAN', subtitle: 'Liver / 涅槃', art: 4 },
-    { key: 'sui', title: 'SUI', subtitle: 'Liver / 翠', art: 3 },
-    { key: 'mii', title: 'HIRUKAZE MII', subtitle: 'Liver / Illustrator / 昼風みぃ', art: 2 },
-    { key: 'luu', title: 'YORUKAZE LUU', subtitle: 'Liver / 夜風るぅ', art: 0 },
-    { key: 'necology', title: 'NECOLOGY', subtitle: 'Liver / 猫路地', art: 1 }
+    { key: 'nehan', title: 'NEHAN', subtitle: 'Liver / 涅槃' },
+    { key: 'sui', title: 'SUI', subtitle: 'Liver / 翠' },
+    { key: 'mii', title: 'HIRUKAZE MII', subtitle: 'Liver / Illustrator / 昼風みぃ' },
+    { key: 'luu', title: 'YORUKAZE LUU', subtitle: 'Liver / 夜風るぅ' },
+    { key: 'necology', title: 'NECOLOGY', subtitle: 'Liver / 猫路地' }
   ];
 
   const staff = [
+    { key: 'takase', title: 'TAKASE KEI', subtitle: '高世 圭', art: 5 },
     { key: 'kuhara', title: 'KUHARA HAKU', subtitle: 'Illustrator / くはらはく', art: 9 },
-    { key: 'poyo', title: 'POYOKICHI', subtitle: 'Designer / ﾎﾟﾖ吉', art: 6 },
-    // Existing unlinked staff cards come after all original linked entries.
-    { key: null, title: 'GOUSHI', subtitle: 'Music / 剛士', art: 6 },
-    { key: null, title: 'DAIKI', subtitle: 'Mix & Mastering / DAIKI', art: 7 },
-    { key: null, title: 'HANA', subtitle: 'Design & Movie / 花', art: 8 }
+    { key: 'poyo', title: 'POYOKICHI', subtitle: 'Designer / staff ﾎﾟﾖ吉', art: 6 },
+    { key: null, title: 'TSUYOSHI', subtitle: 'つよし', art: 6 },
+    { key: null, title: 'DAIKI', subtitle: '', art: 7 },
+    { key: null, title: 'SEKI', subtitle: 'Desk staff / 石', art: 8 }
   ];
 
   const ns = (tag, className, text) => {
@@ -45,30 +42,38 @@
     a.append(name, arrow);
     return a;
   };
-  const createCard = person => {
-    const row = ns('article', 'person-row');
-    const art = ns('div', 'person-art');
-    art.style.setProperty('--art-pos', `${person.art / 9 * 100}%`);
-    art.setAttribute('aria-hidden', 'true');
+  const createCard = (person, kind, index) => {
+    const row = ns('article', `person-row ${kind}-row`);
+    if (kind === 'liver') {
+      const number = ns('span', 'person-index', String(index + 1).padStart(2, '0'));
+      number.setAttribute('aria-hidden', 'true');
+      row.append(number);
+    } else {
+      const art = ns('div', 'person-art');
+      art.style.setProperty('--art-pos', `${person.art / 9 * 100}%`);
+      art.setAttribute('aria-hidden', 'true');
+      row.append(art);
+    }
     const details = ns('div', 'person-details');
-    details.append(ns('p', 'person-subtitle', person.subtitle));
+    if (person.subtitle) details.append(ns('p', 'person-subtitle', person.subtitle));
     details.append(ns('h3', 'person-name', person.title));
-    const social = ns('div', 'person-social');
+    row.append(details);
+
     const items = (groups[person.key] || []).filter(valid);
     if (items.length) {
+      const social = ns('div', 'person-social');
       items.forEach(item => social.append(createLink(item)));
+      row.append(social);
     } else {
-      const span = ns('span', 'creative-credit', 'CREATIVE TEAM');
-      social.append(span);
+      row.classList.add('without-links');
     }
-    row.append(art, details, social);
     return row;
   };
-  const renderRoster = (elementId, people) => {
+  const renderRoster = (elementId, people, kind) => {
     const root = document.getElementById(elementId);
     if (!root) return;
     const fragment = document.createDocumentFragment();
-    people.forEach(person => fragment.append(createCard(person)));
+    people.forEach((person, index) => fragment.append(createCard(person, kind, index)));
     root.replaceChildren(fragment);
   };
   const renderOfficial = () => {
@@ -91,8 +96,7 @@
     });
     root.replaceChildren(fragment);
   };
-  renderRoster('producer-list', producer);
-  renderRoster('liver-list', liver);
-  renderRoster('staff-list', staff);
+  renderRoster('liver-list', liver, 'liver');
+  renderRoster('staff-list', staff, 'staff');
   renderOfficial();
 })();
