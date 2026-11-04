@@ -170,20 +170,19 @@ a:focus-visible { outline: 2px solid #ddd0e6; outline-offset: 4px; }
 .official-grid { display: grid; grid-template-columns: repeat(4,minmax(0,1fr)); gap: 13px; }
 .official-link {
   position: relative;
-  display: grid;
-  grid-template-columns: minmax(0,1fr) 23px auto minmax(0,1fr);
-  align-content: center;
+  display: flex;
+  justify-content: center;
   min-height: 54px;
-  padding: 12px 30px;
+  padding: 12px 42px 12px 22px;
   column-gap: 10px;
   row-gap: 0;
 }
-.official-link .official-mark { grid-column: 2; font-size: 21px; }
+.official-link .official-mark { font-size: 21px; }
 .official-link .social-arrow { position: absolute; right: 13px; top: 50%; transform: translateY(-50%); font-size: 12px; }
 .official-link .official-mark img { width: 28px !important; max-width: none; }
 .official-link .official-mark svg { width: 20px; height: 20px; }
 .official-mark { font: 400 23px/1 var(--display); width: 23px; text-align: center; }
-.official-name { font: 400 12px/1.4 var(--text); letter-spacing: .02em; grid-column: 3; min-width: 0; text-align: center; overflow-wrap: anywhere; }
+.official-name { font: 400 12px/1.4 var(--text); letter-spacing: .02em; flex: 0 1 auto; min-width: 0; text-align: center; overflow-wrap: anywhere; }
 .site-footer {
   position: relative;
   min-height: 135px;
@@ -229,7 +228,7 @@ a:focus-visible { outline: 2px solid #ddd0e6; outline-offset: 4px; }
   .official-heading { min-height: 49px; margin-bottom: 12px; }
   .official-heading h2 { font-size: 18px; }
   .official-grid { grid-template-columns: repeat(2,minmax(0,1fr)); gap: 10px; padding: 0; }
-  .official-link { min-height: 58px; padding: 12px 25px; column-gap: 8px; }
+  .official-link { min-height: 58px; padding: 12px 33px 12px 17px; column-gap: 8px; }
   .official-link .social-arrow { right: 10px; }
   .official-name { font-size: 11px; }
   .person-row { grid-template-columns: minmax(0,1fr); min-height: 0; }
