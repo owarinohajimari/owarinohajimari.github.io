@@ -5,6 +5,9 @@ window.OWAHAJI_LINKS = {
     { name: "TikTok", meta: "SHORT", url: "https://www.tiktok.com/@owahaji_official" },
     { name: "Online shop 間 -AWAI-", meta: "STORE", url: "https://owahaji-awai.booth.pm" }
   ],
+  seki: [
+    { name: "REALITY", meta: "LIVE", url: "https://reality.app/profile/43e4d331?adj_t=8ogcewh_z9yhix5" }
+  ],
   tsuyoshi: [
     { name: "X", meta: "TSUYOSHI", url: "https://x.com/hontonotsu49683" },
     { name: "REALITY", meta: "LIVE", url: "https://reality.app/profile/96568676?adj_t=8ogcewh_z9yhix5" }

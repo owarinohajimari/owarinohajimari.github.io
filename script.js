@@ -18,7 +18,7 @@
     { key: 'poyo', title: 'POYOKICHI', subtitle: 'Design / Staff / ﾎﾟﾖ吉' },
     { key: 'tsuyoshi', title: 'TSUYOSHI', subtitle: 'Music / つよし' },
     { key: 'daiki', title: 'DAIKI', subtitle: 'Music' },
-    { key: null, title: 'SEKI', subtitle: 'Office staff / Design / Movie / セキ' }
+    { key: 'seki', title: 'SEKI', subtitle: 'Office staff / Design / Movie / セキ' }
   ];
 
   const ns = (tag, className, text) => {
