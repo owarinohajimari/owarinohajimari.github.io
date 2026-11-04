@@ -13,6 +13,7 @@ window.OWAHAJI_LINKS = {
     { name: "REALITY", meta: "LIVE", url: "https://reality.app/profile/96568676?adj_t=8ogcewh_z9yhix5" }
   ],
   daiki: [
+    { name: "X", meta: "DAIKI", url: "https://x.com/xIKIADx" },
     { name: "REALITY", meta: "LIVE", url: "https://reality.app/profile/92557237?adj_t=8ogcewh_z9yhix5" }
   ],
   takase: [

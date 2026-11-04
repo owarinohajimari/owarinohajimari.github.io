@@ -214,7 +214,7 @@ a:focus-visible { outline: 2px solid #ddd0e6; outline-offset: 4px; }
   color: #e8e0e5;
 }
 .footer-brand { font: 400 10px/1.4 var(--display); letter-spacing: .39em; text-align: center; }
-.footer-copyright { letter-spacing: .08em; margin-right: .65em; }
+.footer-copyright { font-size: 1.15em; vertical-align: baseline; letter-spacing: .08em; margin-right: .65em; }
 .footer-numbers { position: absolute; right: 0; bottom: 35px; font: 400 10px/1.5 var(--display); letter-spacing: .23em; }
 .back-top { position: absolute; left: 0; bottom: 27px; color: #ada4af; font: 300 21px/1.2 sans-serif; padding: 8px; }
 @media (hover:hover) and (pointer:fine) {
