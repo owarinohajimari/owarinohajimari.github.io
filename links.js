@@ -6,6 +6,7 @@ window.OWAHAJI_LINKS = {
     { name: "Online shop 間 -AWAI-", meta: "STORE", url: "https://owahaji-awai.booth.pm" }
   ],
   tsuyoshi: [
+    { name: "X", meta: "TSUYOSHI", url: "https://x.com/hontonotsu49683" },
     { name: "REALITY", meta: "LIVE", url: "https://reality.app/profile/96568676?adj_t=8ogcewh_z9yhix5" }
   ],
   daiki: [
