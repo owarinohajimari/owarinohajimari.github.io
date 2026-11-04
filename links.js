@@ -27,6 +27,10 @@ window.OWAHAJI_LINKS = {
     { name: "X", meta: "YORUKAZE LUU", url: "https://x.com/Luu_real1752" },
     { name: "REALITY", meta: "LIVE", url: "https://reality.app/profile/73e7d496?adj_t=8ogcewh_z9yhix5" }
   ],
+  necology: [
+    { name: "X", meta: "NECOLOGY", url: "https://x.com/__necology" },
+    { name: "REALITY", meta: "LIVE", url: "https://reality.app/profile/6692fa12?adj_t=8ogcewh_z9yhix5" }
+  ],
   kuhara: [
     { name: "X", meta: "KUHARAHAKU", url: "https://x.com/kuhara89" },
     { name: "REALITY", meta: "LIVE", url: "https://reality.app/profile/9dd40371?adj_t=8ogcewh_z9yhix5" },
