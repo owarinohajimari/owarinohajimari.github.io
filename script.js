@@ -3,8 +3,7 @@
   // Data is loaded from the original links.js, preserving every existing URL.
   const groups = window.OWAHAJI_LINKS || {};
 
-  // Member order is preserved. The floral illustrations alongside LIVER have
-  // been removed and replaced with restrained index numerals.
+  // Preserve existing member order and links; no decorative art or ranking numbers.
   const liver = [
     { key: 'nehan', title: 'NEHAN', subtitle: 'Liver / 涅槃' },
     { key: 'sui', title: 'SUI', subtitle: 'Liver / 翠' },
@@ -14,12 +13,12 @@
   ];
 
   const staff = [
-    { key: 'takase', title: 'TAKASE KEI', subtitle: '高世 圭', art: 5 },
-    { key: 'kuhara', title: 'KUHARA HAKU', subtitle: 'Illustrator / くはらはく', art: 9 },
-    { key: 'poyo', title: 'POYOKICHI', subtitle: 'Designer / staff ﾎﾟﾖ吉', art: 6 },
-    { key: null, title: 'TSUYOSHI', subtitle: 'つよし', art: 6 },
-    { key: null, title: 'DAIKI', subtitle: '', art: 7 },
-    { key: null, title: 'SEKI', subtitle: 'Desk staff / 石', art: 8 }
+    { key: 'takase', title: 'TAKASE KEI', subtitle: '高世 圭' },
+    { key: 'kuhara', title: 'KUHARA HAKU', subtitle: 'Illustrator / くはらはく' },
+    { key: 'poyo', title: 'POYOKICHI', subtitle: 'Designer / staff ﾎﾟﾖ吉' },
+    { key: null, title: 'TSUYOSHI', subtitle: 'つよし' },
+    { key: null, title: 'DAIKI', subtitle: '' },
+    { key: null, title: 'SEKI', subtitle: 'Desk staff / 石' }
   ];
 
   const ns = (tag, className, text) => {
@@ -42,18 +41,8 @@
     a.append(name, arrow);
     return a;
   };
-  const createCard = (person, kind, index) => {
+  const createCard = (person, kind) => {
     const row = ns('article', `person-row ${kind}-row`);
-    if (kind === 'liver') {
-      const number = ns('span', 'person-index', String(index + 1).padStart(2, '0'));
-      number.setAttribute('aria-hidden', 'true');
-      row.append(number);
-    } else {
-      const art = ns('div', 'person-art');
-      art.style.setProperty('--art-pos', `${person.art / 9 * 100}%`);
-      art.setAttribute('aria-hidden', 'true');
-      row.append(art);
-    }
     const details = ns('div', 'person-details');
     if (person.subtitle) details.append(ns('p', 'person-subtitle', person.subtitle));
     details.append(ns('h3', 'person-name', person.title));
@@ -73,7 +62,7 @@
     const root = document.getElementById(elementId);
     if (!root) return;
     const fragment = document.createDocumentFragment();
-    people.forEach((person, index) => fragment.append(createCard(person, kind, index)));
+    people.forEach(person => fragment.append(createCard(person, kind)));
     root.replaceChildren(fragment);
   };
   const renderOfficial = () => {
