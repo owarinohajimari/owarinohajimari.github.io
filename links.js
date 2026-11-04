@@ -17,9 +17,9 @@ window.OWAHAJI_LINKS = {
   ],
   takase: [
     { name: "X", meta: "TAKASE KEI", url: "https://x.com/TAKASEKEI6969" },
-    { name: "note", meta: "WORDS", url: "https://note.com/takasekei6969" },
+    { name: "REALITY", meta: "LIVE", url: "https://reality.app/profile/484c4c11?adj_t=8ogcewh_z9yhix5" },
     { name: "IRIAM", meta: "LIVE", url: "https://web.iriam.app/s/user/RHwrI0zggA?uuid=6e880411" },
-    { name: "REALITY", meta: "LIVE", url: "https://reality.app/profile/484c4c11?adj_t=8ogcewh_z9yhix5" }
+    { name: "note", meta: "WORDS", url: "https://note.com/takasekei6969" }
   ],
   nehan: [
     { name: "X", meta: "NEHAN", url: "https://x.com/NEHANIRVANA" },
