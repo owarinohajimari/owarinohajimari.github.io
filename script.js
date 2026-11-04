@@ -7,17 +7,17 @@
   const liver = [
     { key: 'nehan', title: 'NEHAN', subtitle: 'Liver / 涅槃' },
     { key: 'sui', title: 'SUI', subtitle: 'Liver / 翠' },
-    { key: 'mii', title: 'HIRUKAZE MII', subtitle: 'Liver / Illustrator / 昼風みぃ' },
+    { key: 'mii', title: 'HIRUKAZE MII', subtitle: 'Liver / Illustration / 昼風みぃ' },
     { key: 'luu', title: 'YORUKAZE LUU', subtitle: 'Liver / 夜風るぅ' },
     { key: 'necology', title: 'NECOLOGY', subtitle: 'Liver / 猫路地' }
   ];
 
   const staff = [
     { key: 'takase', title: 'TAKASE KEI', subtitle: 'Music / Design / Movie / 高世 圭' },
-    { key: 'kuhara', title: 'KUHARA HAKU', subtitle: 'Illustrator / くはらはく' },
-    { key: 'poyo', title: 'POYOKICHI', subtitle: 'Designer / staff ﾎﾟﾖ吉' },
-    { key: null, title: 'TSUYOSHI', subtitle: 'Music / つよし' },
-    { key: null, title: 'DAIKI', subtitle: 'Music' },
+    { key: 'kuhara', title: 'KUHARA HAKU', subtitle: 'Illustration / くはらはく' },
+    { key: 'poyo', title: 'POYOKICHI', subtitle: 'Design / Staff / ﾎﾟﾖ吉' },
+    { key: 'tsuyoshi', title: 'TSUYOSHI', subtitle: 'Music / つよし' },
+    { key: 'daiki', title: 'DAIKI', subtitle: 'Music' },
     { key: null, title: 'SEKI', subtitle: 'Office staff / Design / Movie / セキ' }
   ];
 
@@ -27,6 +27,17 @@
     if (text !== undefined) el.textContent = text;
     return el;
   };
+  const createXIcon = () => {
+    const svg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
+    svg.setAttribute('viewBox', '0 0 1200 1227');
+    svg.setAttribute('aria-hidden', 'true');
+    svg.setAttribute('class', 'x-icon');
+    const path = document.createElementNS('http://www.w3.org/2000/svg', 'path');
+    path.setAttribute('d', 'M714.163 519.284L1160.89 0H1055.03L667.137 450.887L357.328 0H0L468.492 681.821L0 1226.37H105.866L515.491 750.218L842.672 1226.37H1200L714.137 519.284H714.163ZM569.165 687.828L521.697 619.934L144.011 79.6944H306.615L611.412 515.685L658.88 583.579L1055.08 1150.3H892.476L569.165 687.854V687.828Z');
+    path.setAttribute('fill', 'currentColor');
+    svg.append(path);
+    return svg;
+  };
   const valid = item => item && typeof item.url === 'string' && /^https:\/\//.test(item.url);
   const createLink = item => {
     const a = ns('a', 'social-link');
@@ -34,8 +45,8 @@
     a.target = '_blank';
     a.rel = 'noopener noreferrer';
     a.setAttribute('aria-label', `${item.name} を新しいタブで開く`);
-    const name = ns('span', 'social-name', item.name === 'X' ? '𝕏' : item.name);
-    if (item.name === 'X') name.classList.add('social-name-x');
+    const name = ns('span', 'social-name', item.name === 'X' ? '' : item.name);
+    if (item.name === 'X') { name.classList.add('social-name-x'); name.append(createXIcon()); }
     const arrow = ns('span', 'social-arrow', '↗');
     arrow.setAttribute('aria-hidden', 'true');
     a.append(name, arrow);
@@ -75,7 +86,8 @@
       a.target = '_blank';
       a.rel = 'noopener noreferrer';
       a.setAttribute('aria-label', `${item.name} を新しいタブで開く`);
-      const mark = ns('span', 'official-mark', item.name === 'X' ? '𝕏' : '');
+      const mark = ns('span', 'official-mark');
+      if (item.name === 'X') mark.append(createXIcon());
       mark.setAttribute('aria-hidden', 'true');
       mark.style.cssText = 'display:inline-flex;align-items:center;justify-content:center;flex:0 0 23px;height:23px';
       if (item.name === 'YouTube') {
@@ -88,7 +100,7 @@
         // Unmodified icon path from TikTok's official developer asset pack.
         const svg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
         svg.setAttribute('viewBox', '14 10 20 22');
-        svg.style.cssText = 'display:block;width:21px;height:23px';
+        svg.style.cssText = 'display:block;width:19px;height:21px';
         svg.setAttribute('fill', 'currentColor');
         const path = document.createElementNS('http://www.w3.org/2000/svg', 'path');
         path.setAttribute('fill-rule', 'evenodd');

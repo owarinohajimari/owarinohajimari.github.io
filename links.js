@@ -5,6 +5,12 @@ window.OWAHAJI_LINKS = {
     { name: "TikTok", meta: "SHORT", url: "https://www.tiktok.com/@owahaji_official" },
     { name: "Online shop 間 -AWAI-", meta: "STORE", url: "https://owahaji-awai.booth.pm" }
   ],
+  tsuyoshi: [
+    { name: "REALITY", meta: "LIVE", url: "https://reality.app/profile/96568676?adj_t=8ogcewh_z9yhix5" }
+  ],
+  daiki: [
+    { name: "REALITY", meta: "LIVE", url: "https://reality.app/profile/92557237?adj_t=8ogcewh_z9yhix5" }
+  ],
   takase: [
     { name: "X", meta: "TAKASE KEI", url: "https://x.com/TAKASEKEI6969" },
     { name: "note", meta: "WORDS", url: "https://note.com/takasekei6969" },
