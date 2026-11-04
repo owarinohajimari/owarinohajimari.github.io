@@ -285,3 +285,8 @@ a:focus-visible { outline: 2px solid #ddd0e6; outline-offset: 4px; }
   html { scroll-behavior: auto; }
   *, *::before, *::after { transition: none !important; }
 }
+
+@media (max-width: 720px) {
+  .person-social:has(> :nth-child(4)) { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .person-social:has(> :nth-child(4)) .social-link { width: 100%; min-width: 0; max-width: none; }
+}
