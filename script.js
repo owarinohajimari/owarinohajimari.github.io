@@ -13,11 +13,11 @@
   ];
 
   const staff = [
-    { key: 'takase', title: 'TAKASE KEI', subtitle: '高世 圭' },
+    { key: 'takase', title: 'TAKASE KEI', subtitle: 'Music / Design / Movie / 高世 圭' },
     { key: 'kuhara', title: 'KUHARA HAKU', subtitle: 'Illustrator / くはらはく' },
     { key: 'poyo', title: 'POYOKICHI', subtitle: 'Designer / staff ﾎﾟﾖ吉' },
-    { key: null, title: 'TSUYOSHI', subtitle: 'つよし' },
-    { key: null, title: 'DAIKI', subtitle: '' },
+    { key: null, title: 'TSUYOSHI', subtitle: 'Music / つよし' },
+    { key: null, title: 'DAIKI', subtitle: 'Music' },
     { key: null, title: 'SEKI', subtitle: 'Desk staff / 石' }
   ];
 
