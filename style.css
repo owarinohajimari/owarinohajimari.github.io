@@ -255,7 +255,7 @@ a:focus-visible { outline: 2px solid #ddd0e6; outline-offset: 4px; }
   .person-name { font-size: clamp(17px,4.4vw,21px); }
   .person-social { grid-column: 1; grid-row: 2; justify-content: flex-start; padding: 7px 14px 16px; gap: 7px; }
   .person-social::before { display: none; }
-  .social-link { min-height: 44px; flex: 1 1 0; max-width: 112px; width: auto; padding: 8px 16px; }
+  .social-link { min-height: 44px; min-width: 84px; flex: 1 1 0; max-width: 112px; width: auto; padding: 8px 16px; }
   .without-links .person-details { padding-bottom: 18px; }
   .footer-brand { font-size: 9px; letter-spacing: .19em; }
   .site-footer { padding-top: 28px; padding-bottom: 24px; min-height: 120px; flex-direction: column; align-items: center; justify-content: flex-end; gap: 14px; }
