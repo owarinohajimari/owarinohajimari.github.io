@@ -163,6 +163,7 @@ a:focus-visible { outline: 2px solid #ddd0e6; outline-offset: 4px; }
 .social-link {
   position: relative;
   justify-content: center;
+  height: 44px;
   flex: 0 0 104px;
   width: 104px;
   min-width: 0;
@@ -287,6 +288,6 @@ a:focus-visible { outline: 2px solid #ddd0e6; outline-offset: 4px; }
 }
 
 @media (max-width: 720px) {
-  .person-social:has(> :nth-child(4)) { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); }
-  .person-social:has(> :nth-child(4)) .social-link { width: 100%; min-width: 0; max-width: none; }
+  .person-social { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .person-social .social-link { width: 100%; min-width: 0; max-width: none; }
 }
