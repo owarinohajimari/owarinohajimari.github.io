@@ -3,21 +3,26 @@
   // Data is loaded from the original links.js, preserving every existing URL.
   const groups = window.OWAHAJI_LINKS || {};
 
+  // Preserve the link-directory order from the previous published version.
+  const producer = [
+    { key: 'takase', title: 'TAKASE KEI', subtitle: 'Producer / 高世 圭', art: 5 }
+  ];
+
   const liver = [
-    { key: 'luu', title: 'YORUKAZE LUU', subtitle: 'Liver / 夜風るぅ', art: 0 },
-    { key: 'necology', title: 'NECOLOGY', subtitle: 'Liver / 猫路地', art: 1 },
-    { key: 'mii', title: 'HIRUKAZE MII', subtitle: 'Liver / Illustrator / 昼風みぃ', art: 2 },
+    { key: 'nehan', title: 'NEHAN', subtitle: 'Liver / 涅槃', art: 4 },
     { key: 'sui', title: 'SUI', subtitle: 'Liver / 翠', art: 3 },
-    { key: 'nehan', title: 'NEHAN', subtitle: 'Liver / 涅槃', art: 4 }
+    { key: 'mii', title: 'HIRUKAZE MII', subtitle: 'Liver / Illustrator / 昼風みぃ', art: 2 },
+    { key: 'luu', title: 'YORUKAZE LUU', subtitle: 'Liver / 夜風るぅ', art: 0 },
+    { key: 'necology', title: 'NECOLOGY', subtitle: 'Liver / 猫路地', art: 1 }
   ];
 
   const staff = [
-    { key: 'takase', title: 'TAKASE KEI', subtitle: 'Producer / 高世 圭', art: 5 },
+    { key: 'kuhara', title: 'KUHARA HAKU', subtitle: 'Illustrator / くはらはく', art: 9 },
+    { key: 'poyo', title: 'POYOKICHI', subtitle: 'Designer / ﾎﾟﾖ吉', art: 6 },
+    // Existing unlinked staff cards come after all original linked entries.
     { key: null, title: 'GOUSHI', subtitle: 'Music / 剛士', art: 6 },
     { key: null, title: 'DAIKI', subtitle: 'Mix & Mastering / DAIKI', art: 7 },
-    { key: null, title: 'HANA', subtitle: 'Design & Movie / 花', art: 8 },
-    { key: 'kuhara', title: 'KUHARA HAKU', subtitle: 'Illustrator / くはらはく', art: 9 },
-    { key: 'poyo', title: 'POYOKICHI', subtitle: 'Designer / ﾎﾟﾖ吉', art: 6 }
+    { key: null, title: 'HANA', subtitle: 'Design & Movie / 花', art: 8 }
   ];
 
   const ns = (tag, className, text) => {
@@ -86,6 +91,7 @@
     });
     root.replaceChildren(fragment);
   };
+  renderRoster('producer-list', producer);
   renderRoster('liver-list', liver);
   renderRoster('staff-list', staff);
   renderOfficial();
