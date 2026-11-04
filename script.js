@@ -18,7 +18,7 @@
     { key: 'poyo', title: 'POYOKICHI', subtitle: 'Designer / staff ﾎﾟﾖ吉' },
     { key: null, title: 'TSUYOSHI', subtitle: 'Music / つよし' },
     { key: null, title: 'DAIKI', subtitle: 'Music' },
-    { key: null, title: 'SEKI', subtitle: 'Desk staff / 石' }
+    { key: null, title: 'SEKI', subtitle: 'Desk staff / Design / Movie / セキ' }
   ];
 
   const ns = (tag, className, text) => {
@@ -75,7 +75,7 @@
       a.target = '_blank';
       a.rel = 'noopener noreferrer';
       a.setAttribute('aria-label', `${item.name} を新しいタブで開く`);
-      const mark = ns('span', 'official-mark', item.name === 'X' ? '𝕏' : item.name === 'YouTube' ? '▶' : item.name === 'TikTok' ? '♪' : '◈');
+      const mark = ns('span', 'official-mark', item.name === 'X' ? '𝕏' : item.name === 'YouTube' ? '▶' : item.name === 'TikTok' ? '♪' : '🛒');
       mark.setAttribute('aria-hidden', 'true');
       const label = ns('span', 'official-name', item.name);
       const arrow = ns('span', 'social-arrow', '↗');
