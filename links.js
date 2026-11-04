@@ -7,7 +7,8 @@ window.OWAHAJI_LINKS = {
   ],
   takase: [
     { name: "X", meta: "TAKASE KEI", url: "https://x.com/TAKASEKEI6969" },
-    { name: "note", meta: "WORDS", url: "https://note.com/takasekei6969" }
+    { name: "note", meta: "WORDS", url: "https://note.com/takasekei6969" },
+    { name: "IRIAM", meta: "LIVE", url: "https://web.iriam.app/s/user/RHwrI0zggA?uuid=6e880411" }
   ],
   nehan: [
     { name: "X", meta: "NEHAN", url: "https://x.com/NEHANIRVANA" },
