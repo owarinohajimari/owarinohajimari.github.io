@@ -189,7 +189,7 @@ a:focus-visible { outline: 2px solid #ddd0e6; outline-offset: 4px; }
   display: flex;
   justify-content: center;
   min-height: 54px;
-  padding: 12px 50px 12px 14px;
+  padding: 12px 32px;
   column-gap: 10px;
   row-gap: 0;
 }
@@ -212,6 +212,7 @@ a:focus-visible { outline: 2px solid #ddd0e6; outline-offset: 4px; }
   color: #e8e0e5;
 }
 .footer-brand { font: 400 10px/1.4 var(--display); letter-spacing: .39em; text-align: center; }
+.footer-copyright { letter-spacing: .08em; margin-right: .65em; }
 .footer-numbers { position: absolute; right: 0; bottom: 35px; font: 400 10px/1.5 var(--display); letter-spacing: .23em; }
 .back-top { position: absolute; left: 0; bottom: 27px; color: #ada4af; font: 300 21px/1.2 sans-serif; padding: 8px; }
 @media (hover:hover) and (pointer:fine) {
@@ -244,7 +245,7 @@ a:focus-visible { outline: 2px solid #ddd0e6; outline-offset: 4px; }
   .official-heading { min-height: 49px; margin-bottom: 12px; }
   .official-heading h2 { font-size: 18px; }
   .official-grid { grid-template-columns: repeat(2,minmax(0,1fr)); gap: 10px; padding: 0; }
-  .official-link { min-height: 58px; padding: 12px 39px 12px 11px; column-gap: 8px; }
+  .official-link { min-height: 58px; padding: 12px 26px; column-gap: 8px; }
   .official-link .social-arrow { right: 10px; }
   .official-name { font-size: 11px; }
   .person-row { grid-template-columns: minmax(0,1fr); min-height: 0; }
