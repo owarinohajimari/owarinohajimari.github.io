@@ -99,6 +99,7 @@ a:focus-visible { outline: 2px solid #ddd0e6; outline-offset: 4px; }
   color: #d0c7cf;
 }
 .section-slash {
+  display: none;
   width: 25px;
   height: 1px;
   background: rgba(248, 237, 246, .62);
@@ -181,7 +182,7 @@ a:focus-visible { outline: 2px solid #ddd0e6; outline-offset: 4px; }
 .social-name { font: 400 11px/1.3 var(--text); letter-spacing: .035em; white-space: nowrap; }
 .social-name-x { display: flex; align-items: center; justify-content: center; line-height: 1; }
 .x-icon { display: block; width: 17px; height: 18px; }
-.social-arrow { font: 400 13px/1 sans-serif; color: #d9cdd8; }
+.social-arrow { font: 400 13px/1 sans-serif; color: #d9cdd8; transition: transform .2s ease; }
 .official-heading { justify-content: center; gap: 23px; min-height: 49px; margin-bottom: 10px; }
 .official-heading h2 { font-size: 19px; letter-spacing: .20em; }
 .heading-line { display: block; flex: 1; height: 1px; background: var(--line); }
@@ -219,12 +220,12 @@ a:focus-visible { outline: 2px solid #ddd0e6; outline-offset: 4px; }
 .back-top { position: absolute; left: 0; bottom: 27px; color: #ada4af; font: 300 21px/1.2 sans-serif; padding: 8px; }
 @media (hover:hover) and (pointer:fine) {
   .social-link:hover, .official-link:hover {
-    background: rgba(246,240,246,.94);
-    border-color: #faf3f9;
-    color: #111014;
-    transform: translateY(-2px);
+    background: rgba(5,5,8,.29);
+    border-color: rgba(246,240,246,.85);
+    color: #f1eff1;
+    transform: none;
   }
-  .social-link:hover .social-arrow, .official-link:hover .social-arrow { color: #111014; }
+  .social-link:hover .social-arrow, .official-link:hover .social-arrow { color: #d9cdd8; transform: translate(2px, calc(-50% - 2px)); }
   .back-top:hover { color: #fff; }
 }
 @media (max-width: 950px) {
@@ -290,4 +291,8 @@ a:focus-visible { outline: 2px solid #ddd0e6; outline-offset: 4px; }
 @media (max-width: 720px) {
   .person-social { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); }
   .person-social .social-link { width: 100%; min-width: 0; max-width: none; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .social-link:hover .social-arrow, .official-link:hover .social-arrow { transform: translateY(-50%); }
 }
