@@ -55,19 +55,23 @@
   const createCard = (person, kind) => {
     const row = ns('article', `person-row ${kind}-row`);
     const details = ns('div', 'person-details');
-    if (person.subtitle) {
-      const subtitle = ns('p', 'person-subtitle', person.subtitle);
-      if (person.roman) {
-        subtitle.append(document.createTextNode(' / '));
-        const roman = ns('span', 'person-roman', person.roman);
-        roman.style.fontFamily = 'var(--display)';
-        roman.style.letterSpacing = '.08em';
-        subtitle.append(roman);
-      }
-      details.append(subtitle);
+    if (person.subtitle) details.append(ns('p', 'person-subtitle', person.subtitle));
+    const title = ns('h3', 'person-name');
+    title.append(ns('span', 'person-japanese', person.title));
+    if (person.roman) {
+      title.style.fontFamily = 'var(--text)';
+      title.style.display = 'flex';
+      title.style.flexWrap = 'wrap';
+      title.style.alignItems = 'baseline';
+      title.style.columnGap = '.5em';
+      title.style.rowGap = '.25em';
+      const roman = ns('span', 'person-roman');
+      roman.style.cssText = 'display:inline-flex;align-items:baseline;gap:.65em;white-space:nowrap;font-family:var(--display);font-size:.6em;letter-spacing:.08em;color:#c5bdc7';
+      const separator = ns('span', 'name-separator', '—');
+      separator.setAttribute('aria-hidden', 'true');
+      roman.append(separator, document.createTextNode(person.roman));
+      title.append(document.createTextNode(' '), roman);
     }
-    const title = ns('h3', 'person-name', person.title);
-    if (person.roman) title.style.fontFamily = 'var(--text)';
     details.append(title);
     row.append(details);
 
