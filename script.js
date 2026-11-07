@@ -57,18 +57,21 @@
     const details = ns('div', 'person-details');
     if (person.subtitle) details.append(ns('p', 'person-subtitle', person.subtitle));
     const title = ns('h3', 'person-name');
-    title.append(ns('span', 'person-japanese', person.title));
+    const japanese = ns('span', 'person-japanese', person.title);
+    if (person.key === 'kuhara') japanese.style.marginRight = '-.16em';
+    title.append(japanese);
     if (person.roman) {
       title.style.fontFamily = 'var(--text)';
       title.style.display = 'flex';
       title.style.flexWrap = 'wrap';
       title.style.alignItems = 'baseline';
-      title.style.columnGap = '.5em';
+      title.style.columnGap = '.35em';
       title.style.rowGap = '.25em';
       const roman = ns('span', 'person-roman');
-      roman.style.cssText = 'display:inline-flex;align-items:baseline;gap:.65em;white-space:nowrap;font-family:var(--display);font-size:.6em;letter-spacing:.08em;color:#c5bdc7';
+      roman.style.cssText = 'display:inline-flex;align-items:baseline;gap:.4em;white-space:nowrap;font-family:var(--display);font-size:.78em;letter-spacing:.04em;color:#c5bdc7;line-height:1.25;position:relative;top:-.065em';
       const separator = ns('span', 'name-separator', '-');
       separator.setAttribute('aria-hidden', 'true');
+      separator.style.cssText = 'font-family:Arial,sans-serif;font-size:.85em;line-height:1;position:relative;top:-.1em';
       roman.append(separator, document.createTextNode(person.roman));
       title.append(document.createTextNode(' '), roman);
     }
