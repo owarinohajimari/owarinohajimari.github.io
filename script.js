@@ -5,20 +5,20 @@
 
   // Preserve existing member order and links; no decorative art or ranking numbers.
   const liver = [
-    { key: 'nehan', title: 'NEHAN', subtitle: 'Liver / 涅槃' },
-    { key: 'sui', title: 'SUI', subtitle: 'Liver / 翠' },
-    { key: 'mii', title: 'HIRUKAZE MII', subtitle: 'Liver / Illustration / 昼風みぃ' },
-    { key: 'luu', title: 'YORUKAZE LUU', subtitle: 'Liver / 夜風るぅ' },
-    { key: 'necology', title: 'NECOLOGY', subtitle: 'Liver / 猫路地' }
+    { key: 'nehan', title: '涅槃', subtitle: 'Liver', roman: 'NEHAN' },
+    { key: 'sui', title: '翠', subtitle: 'Liver', roman: 'SUI' },
+    { key: 'mii', title: '昼風みぃ', subtitle: 'Liver / Illustration', roman: 'HIRUKAZE MII' },
+    { key: 'luu', title: '夜風るぅ', subtitle: 'Liver', roman: 'YORUKAZE LUU' },
+    { key: 'necology', title: '猫路地', subtitle: 'Liver', roman: 'NECOLOGY' }
   ];
 
   const staff = [
-    { key: 'takase', title: 'TAKASE KEI', subtitle: 'Music / Design / Movie / 高世 圭' },
-    { key: 'kuhara', title: 'KUHARA HAKU', subtitle: 'Illustration / くはらはく' },
-    { key: 'poyo', title: 'POYOKICHI', subtitle: 'Design / Staff / ﾎﾟﾖ吉' },
-    { key: 'tsuyoshi', title: 'TSUYOSHI', subtitle: 'Music / つよし' },
+    { key: 'takase', title: '高世 圭', subtitle: 'Music / Design / Movie', roman: 'TAKASE KEI' },
+    { key: 'kuhara', title: 'くはらはく', subtitle: 'Illustration', roman: 'KUHARA HAKU' },
+    { key: 'poyo', title: 'ﾎﾟﾖ吉', subtitle: 'Design / Staff', roman: 'POYOKICHI' },
+    { key: 'tsuyoshi', title: 'つよし', subtitle: 'Music', roman: 'TSUYOSHI' },
     { key: 'daiki', title: 'DAIKI', subtitle: 'Music' },
-    { key: 'seki', title: 'SEKI', subtitle: 'Office staff / Design / Movie / セキ' }
+    { key: 'seki', title: 'セキ', subtitle: 'Office staff / Design / Movie', roman: 'SEKI' }
   ];
 
   const ns = (tag, className, text) => {
@@ -55,8 +55,20 @@
   const createCard = (person, kind) => {
     const row = ns('article', `person-row ${kind}-row`);
     const details = ns('div', 'person-details');
-    if (person.subtitle) details.append(ns('p', 'person-subtitle', person.subtitle));
-    details.append(ns('h3', 'person-name', person.title));
+    if (person.subtitle) {
+      const subtitle = ns('p', 'person-subtitle', person.subtitle);
+      if (person.roman) {
+        subtitle.append(document.createTextNode(' / '));
+        const roman = ns('span', 'person-roman', person.roman);
+        roman.style.fontFamily = 'var(--display)';
+        roman.style.letterSpacing = '.08em';
+        subtitle.append(roman);
+      }
+      details.append(subtitle);
+    }
+    const title = ns('h3', 'person-name', person.title);
+    if (person.roman) title.style.fontFamily = 'var(--text)';
+    details.append(title);
     row.append(details);
 
     const items = (groups[person.key] || []).filter(valid);
