@@ -67,7 +67,7 @@
       title.style.rowGap = '.25em';
       const roman = ns('span', 'person-roman');
       roman.style.cssText = 'display:inline-flex;align-items:baseline;gap:.65em;white-space:nowrap;font-family:var(--display);font-size:.6em;letter-spacing:.08em;color:#c5bdc7';
-      const separator = ns('span', 'name-separator', '・');
+      const separator = ns('span', 'name-separator', '-');
       separator.setAttribute('aria-hidden', 'true');
       roman.append(separator, document.createTextNode(person.roman));
       title.append(document.createTextNode(' '), roman);
